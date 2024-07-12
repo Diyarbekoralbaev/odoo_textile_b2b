@@ -1,0 +1,14 @@
+<odoo>
+    <data>
+        <template id="recommended_products" name="Recommended Products">
+            <t t-foreach="recommended_products" t-as="product">
+                <div class="recommended-product">
+                    <a t-att-href="'/shop/product/' + str(product.id)">
+                        <img t-att-src="'data:image/png;base64,' + product.image_1920" class="img-responsive"/>
+                        <h4 t-esc="product.name"/>
+                    </a>
+                </div>
+            </t>
+        </template>
+    </data>
+</odoo>
